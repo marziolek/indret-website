@@ -50,12 +50,7 @@ if(have_rows('flex', $home)):
               <div class="next-quotes" id="next-<?php echo $next ?>">
                 <i class="icon-arrow"></i>
               </div>
-              <div class="cycle-slideshow quotes-slider"
-                data-cycle-fx=carousel
-                data-cycle-slides=.quote
-                data-cycle-timeout=0
-                data-cycle-swipe=true
-                data-cycle-swipe-fx=scrollHorz
+              <div class="quotes-slider"
                 data-cycle-prev=#prev-<?php echo $prev ?>
                 data-cycle-next=#next-<?php echo $next ?>
               >

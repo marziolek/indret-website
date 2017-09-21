@@ -1,9 +1,9 @@
 <section class="flex sliders" id="insiration">
-  <div class="section-tile link-billed">
+  <a href="#billed-galleri" data-target="#billed-galleri" class="section-tile link-billed custom-target-link">
     <div class="section-icon center">
       <div class="text-center center">Læs mere<br/> om hvordan jeg griber opgaven an ?</div>
     </div>
-  </div>
+  </a>
   <!-- /.section-tile -->
 
   <?php if( have_rows('slider_1') ): ?>
@@ -28,7 +28,7 @@
 
   <?php endif; ?>
 
-  <div class="section-tile section-tile--teal link-bolig">
+  <a href="#boligalleri" data-target="#boligalleri" class="section-tile section-tile--teal link-bolig custom-target-link">
     <div class="section-icon section-icon--text">
       <i class="icon-square"></i>
     </div>
@@ -36,7 +36,7 @@
       Se<br/>
       Boliggalleri
     </div>
-  </div>
+  </a>
   <!-- /.section-tile -->
 
   <?php if( have_rows('slider_2') ): ?>

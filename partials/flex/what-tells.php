@@ -53,11 +53,11 @@
     <?php endif; ?>
 
   <?php if( $leftCircle ): ?>
-    <div class="what-circle-left link-erhvers">
+    <a href="#gallery-erhvervsgalleri" data-target="#gallery-erhvervsgalleri" class="what-circle-left link-erhvers custom-target-link">
       <div class="text-center center">
         <?php echo $leftCircle ?>
       </div>
-    </div>
+    </a>
   <?php endif; ?>
   <?php if( $leftCircleImage ): ?>
     <div class="what-circle-left2">

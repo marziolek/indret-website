@@ -103,4 +103,8 @@ wp_enqueue_script(
     false,                                                //version
     true                                                  //footer
 );
- 
+
+add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
+function wpdocs_theme_setup() {
+    add_image_size( 'slider-thumb', 300 ); // 300 pixels wide (and unlimited height)
+}

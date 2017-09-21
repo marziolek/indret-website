@@ -14,20 +14,24 @@ get_header();
 <?php // print archive info here (posts found)  ?>
 
 <?php if ( have_posts() ) : ?>
+<div class="grid-blog">
+  <div class="left-cont">
+  	<?php while ( have_posts() ) : the_post(); ?>
 
-	<?php while ( have_posts() ) : the_post(); ?>
+      <?php get_template_part( 'partials/content', 'loop' ); ?>
 
-    <?php get_template_part( 'content', 'loop' ); ?>
+  	<?php endwhile; ?>
+  </div>
+  <?php else : ?>
 
-	<?php endwhile; ?>
+  	<?php // print empty info here (no posts found)  ?>
 
-<?php else : ?>
+  <?php endif; ?>
 
-	<?php // print empty archive info here (no posts found)  ?>
-
-<?php endif; ?>
-
-<?php // add pagination if needed here  ?>
-
-<?php get_sidebar(); ?>
+  <?php // add pagination if needed here  ?>
+  <div class="sidebar-cont">
+    <?php get_sidebar(); ?>
+  </div>
+</div>
+<!-- /.grid-blog -->
 <?php get_footer();

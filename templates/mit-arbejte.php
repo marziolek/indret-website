@@ -48,7 +48,6 @@ if(have_rows('flex', $home)):
                  data-cycle-slides="> .slide"
                  data-cycle-timeout=0
                  data-cycle-swipe=true
-                 data-cycle-swipe-fx=scrollHorz
                  data-cycle-prev=#prev-<?php echo $prev ?>
                  data-cycle-next=#next-<?php echo $next ?>
                >

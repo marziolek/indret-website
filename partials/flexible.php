@@ -3,7 +3,7 @@
 // check if the flexible content field has rows of data
 if( have_rows('flex') ):
 
-     // loop through the rows of data
+     // loop through the rowsucceshistorier of data
     while ( have_rows('flex') ) : the_row();
 
         if( get_row_layout() == 'intro' ):
@@ -22,6 +22,10 @@ if( have_rows('flex') ):
 
             get_template_part('partials/flex/attention-points');
 
+        elseif ( get_row_layout() == 'carousel_erhvervsgalleri' ):
+            
+            get_template_part('partials/flex/carousel-erhvervsgalleri');
+
         elseif ( get_row_layout() == 'price_picture' ):
 
             get_template_part('partials/flex/price-picture');
@@ -29,6 +33,14 @@ if( have_rows('flex') ):
         elseif ( get_row_layout() == 'sliders' ):
 
             get_template_part('partials/flex/sliders');
+
+        elseif ( get_row_layout() == 'gallery-modal-nomodal' ):
+
+            get_template_part('partials/flex/gallery-modal-nomodal');
+
+        elseif ( get_row_layout() == 'carousel_boliggalleri' ):
+
+            get_template_part('partials/flex/carousel-boliggalleri');
 
         elseif ( get_row_layout() == 'team' ):
 

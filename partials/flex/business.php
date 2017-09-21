@@ -58,14 +58,14 @@
   <!-- /.business-cont -->
 
 <?php if( $textSquare ): ?>
-  <div class="section-tile section-tile--teal link-erhvers">
+  <a href="#gallery-erhvervsgalleri" data-target="#gallery-erhvervsgalleri" class="section-tile section-tile--teal link-erhvers custom-target-link">
     <div class="section-icon section-icon--text">
       <i class="icon-square"></i>
     </div>
     <div class="text-center">
       <?php echo $textSquare ?>
     </div>
-  </div>
+  </a>
   <!-- /.section-tile -->
 <?php endif; ?>
 
