@@ -92,9 +92,9 @@ if(have_rows('flex', $home)):
          <?php endif; ?>
 
            <div class="business-gallery">
-             <?php echo $gallery1 ? '<img src="'.$gallery1.'" alt="" />' : '' ?>
-             <?php echo $gallery2 ? '<img src="'.$gallery2.'" alt="" />' : '' ?>
-             <?php echo $gallery3 ? '<img src="'.$gallery3.'" alt="" />' : '' ?>
+             <?php echo $gallery1 ? '<img data-src="'.$gallery1.'" alt="" />' : '' ?>
+             <?php echo $gallery2 ? '<img data-src="'.$gallery2.'" alt="" />' : '' ?>
+             <?php echo $gallery3 ? '<img data-src="'.$gallery3.'" alt="" />' : '' ?>
            </div>
            <!-- /.business-gallery -->
 

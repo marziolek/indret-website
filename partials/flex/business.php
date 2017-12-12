@@ -58,7 +58,7 @@
   <!-- /.business-cont -->
 
 <?php if( $textSquare ): ?>
-  <a href="#gallery-erhvervsgalleri" data-target="#gallery-erhvervsgalleri" class="section-tile section-tile--teal link-erhvers custom-target-link">
+  <a href="#erhvervsgalleri" data-target="#erhvervsgalleri" class="section-tile section-tile--teal link-erhvers custom-target-link">
     <div class="section-icon section-icon--text">
       <i class="icon-square"></i>
     </div>
@@ -70,9 +70,9 @@
 <?php endif; ?>
 
   <div class="business-gallery">
-    <?php echo $gallery1 ? '<img src="'.$gallery1.'" alt="" />' : '' ?>
-    <?php echo $gallery2 ? '<img src="'.$gallery2.'" alt="" />' : '' ?>
-    <?php echo $gallery3 ? '<img src="'.$gallery3.'" alt="" />' : '' ?>
+    <?php echo $gallery1 ? '<img data-src="'.$gallery1.'" alt="" />' : '' ?>
+    <?php echo $gallery2 ? '<img data-src="'.$gallery2.'" alt="" />' : '' ?>
+    <?php echo $gallery3 ? '<img data-src="'.$gallery3.'" alt="" />' : '' ?>
   </div>
   <!-- /.business-gallery -->
 

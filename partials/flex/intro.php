@@ -43,7 +43,7 @@
                 $imageSlider = get_sub_field('intro_slider_image');
                 ?>
 
-                <img src="<?php echo $imageSlider ?>" alt="">
+                <img data-src="<?php echo $imageSlider ?>" alt="">
 
               <?php endwhile; ?>
               </div>
@@ -53,7 +53,7 @@
 
         <?php else: ?>
           <div <?php echo $margin ? 'style="margin-top: '.$margin.'px;"' : '' ?>>
-            <img src="<?php echo $image ?>" alt="">
+            <img data-src="<?php echo $image ?>" alt="">
           </div>
         <?php endif; ?>
 

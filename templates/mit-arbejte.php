@@ -61,7 +61,7 @@ if(have_rows('flex', $home)):
 
                <div class="slide">
                  <div class="slide-cont link-inspirations">
-                   <img src="<?php echo $image ?>" alt="">
+                   <img data-src="<?php echo $image ?>" alt="">
                    <div class="cover"><b><?php echo $productTitle ?></b><br/><?php echo $productSubtitle ?></div>
                  </div>
                </div>

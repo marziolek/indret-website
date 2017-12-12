@@ -23,6 +23,8 @@ var Indret2016 = {
     Indret2016.teamModal();
     Indret2016.quoteModal();
     Indret2016.slideshows();
+    Indret2016.closePopupsOuterClick();
+    Indret2016.lazyLoad();
   },
 
   /**
@@ -86,7 +88,7 @@ var Indret2016 = {
       });
     }
 
-    $('#navigation [data-target], .scroll-source, .custom-target-link').on('click', function ($ev) {
+    $('.is-front-page #navigation [data-target], .scroll-source, .custom-target-link').on('click', function ($ev) {
       var self = $(this),
         target = self.data('target');
       
@@ -113,7 +115,8 @@ var Indret2016 = {
   },
 
   tooltipToggle: function () {
-    $('.business-tile').on('click', function () {
+    $('.business-tile').on('click', function (event) {
+      event.stopPropagation();
       $('.business-tooltip').hide();
       $(this).find('.business-tooltip').toggle();
     });
@@ -121,6 +124,10 @@ var Indret2016 = {
     $('.business-tooltip').on('click', function (event) {
       event.stopPropagation();
       $(this).hide();
+    });
+
+    $(window).on('click', function () {
+      $('.business-tooltip').hide();
     });
 
     if ($(window).width() <= 940) {
@@ -220,9 +227,30 @@ var Indret2016 = {
     }, 500);
   },
 
-  closeButtonSliders: function() {
-    var closeBtn = $('#lightbox .lb-closeContainer');
-    
+  closePopupsOuterClick: function() {
+    var outerContainerLb = $('.lb-outerContainer'),
+      closeLbButton = $('.lb-close');
+
+    outerContainerLb.click( function($ev) {
+      if ($($ev.currentTarget).hasClass('lb-outerContainer')) {
+        if (closeLbButton.length) {
+          closeLbButton.click()
+        }
+      }
+    })
+  },
+
+  lazyLoad: function() {
+    (function(w, d){
+      var b = d.getElementsByTagName('body')[0];
+      var s = d.createElement("script"); s.async = true;
+      var v = !("IntersectionObserver" in w) ? "8.5.2" : "10.3.5";
+      s.src = "https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/" + v + "/lazyload.min.js";
+      w.lazyLoadOptions = {}; // Your options here. See "recipes" for more information about async.
+      b.appendChild(s);
+    }(window, document));    
+
+    window.lazyLoadOptions = {};
   }
 };
 

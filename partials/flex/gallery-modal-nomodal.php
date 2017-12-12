@@ -4,7 +4,10 @@ $gal3Content = get_field('gal3_content', $id);
 $gal3Circle = get_field('gal3_circle', $id);
 $gal3MainTitle = get_field('gal3_tiles_main_title', $id);
 $gal3CircleImage = get_field('gal3_circle_image', $id);
-$gal3CircleImage = wp_get_attachment_image_src($gal3CircleImage, 'full');
+if (strpos($gal3CircleImage, 'uploads') === false) {
+  $gal3CircleImage = wp_get_attachment_image_src($gal3CircleImage, 'full');
+  $gal3CircleImage = $gal3CircleImage[0];
+}
 ?>
 
 <section class="billed-galleri" id="billed-galleri">
@@ -16,14 +19,14 @@ $gal3CircleImage = wp_get_attachment_image_src($gal3CircleImage, 'full');
       </div>
       <!-- /.billed-desc -->
       <div class="big-circle">
-        <img src="<?php echo $gal3CircleImage[0]; ?>" alt="">
+        <img data-src="<?php echo $gal3CircleImage; ?>" alt="">
       </div>
       <!-- /.big-circle -->
-      <div class="button-circle link-bolig">
+      <a href="#boliggalleri" data-target="#boliggalleri" class="button-circle link-bolig custom-target-link">
         <div class="text-center center">
           <?php echo $gal3Circle ?>
         </div>
-      </div>
+      </a>
       <!-- /.button-circle -->
     </div>
     <!-- /.billed-cont -->

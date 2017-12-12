@@ -8,7 +8,7 @@
   <?php if( $teamTitle ): ?><h3><?php echo $teamTitle ?></h3><?php endif; ?>
   <?php if( $teamDesc ): ?><p><?php echo $teamDesc ?></p><?php endif; ?>
   <div class="img-responsive">
-    <?php if( $teamImage ): ?><img src="<?php echo $teamImage ?>" alt=""><?php endif; ?>
+    <?php if( $teamImage ): ?><img data-src="<?php echo $teamImage ?>" alt=""><?php endif; ?>
   </div>
 </section>
 <!-- /.team -->

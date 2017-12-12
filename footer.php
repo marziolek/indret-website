@@ -10,7 +10,7 @@
 ?>
 
   <footer class="footer">
-    <p>© INDRET.NU 2016</p>
+    <p>© INDRET.NU <?php echo date("Y"); ?></p>
     <p>SE nr.: 30 32 56 72<br/>Saxo Privatbank, 7953 – 0000067687</p>
   </footer>
   <!-- / footer -->

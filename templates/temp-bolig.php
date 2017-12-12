@@ -108,7 +108,7 @@ endif;
                 $image1 = get_sub_field('slider_1_image');
                 ?>
 
-                <img src="<?php echo $image1 ?>" alt="">
+                <img data-src="<?php echo $image1 ?>" alt="">
               <?php endwhile; ?>
               </div>
               <!-- /.slider -->
@@ -141,7 +141,7 @@ endif;
                 $image1 = get_sub_field('slider_2_image');
                 ?>
 
-                <img src="<?php echo $image1 ?>" alt="">
+                <img data-src="<?php echo $image1 ?>" alt="">
               <?php endwhile; ?>
               </div>
               <!-- /.slider -->

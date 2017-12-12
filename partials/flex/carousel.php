@@ -36,7 +36,7 @@
 
       <a href="<?php echo $file; ?>" target="_blank" class="slide">
         <div class="slide-cont">
-          <img src="<?php echo $image; ?>" alt="">
+          <img data-src="<?php echo $image; ?>" alt="">
           <div class="cover"><b><?php echo $productTitle; ?></b><br/><?php echo $productSubtitle; ?></div>
         </div>
       </a>

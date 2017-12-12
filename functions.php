@@ -92,13 +92,13 @@ wp_enqueue_script(
     get_template_directory_uri() . '/js/plugins.min.js', //path
     array('jquery'),                                      //dependencies
     false,                                                //version
-    true                                                  //footer
+    false                                                  //footer
 );
 
 // add main script to Footer
 wp_enqueue_script(
     'main',                                 //slug
-    get_template_directory_uri() . '/js/main.js?v14', //path
+    get_template_directory_uri() . '/js/main.min.js?v14', //path
     array('jquery'),                                      //dependencies
     false,                                                //version
     true                                                  //footer
@@ -106,5 +106,18 @@ wp_enqueue_script(
 
 add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
 function wpdocs_theme_setup() {
-    add_image_size( 'slider-thumb', 300 ); // 300 pixels wide (and unlimited height)
+    add_image_size( 'slider-thumb', 300, 200, true );
 }
+
+add_filter( 'image_size_names_choose', 'my_custom_sizes' );
+
+function my_custom_sizes( $sizes ) {
+	 return array_merge( $sizes, array(
+			 'slider-thumb' => __( 'Slider thumb' ),
+	 ) );
+}
+
+function add_menuclass($ulclass) {
+	return preg_replace('/<a /', '<a class="nav-link"', $ulclass);
+}
+add_filter('wp_nav_menu','add_menuclass');

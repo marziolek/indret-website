@@ -9,7 +9,7 @@
   $galleryUniq = uniqid();
  ?>
 
-<div class="inspirations <?php echo $bg ? $bg : '' ?>" <?php echo $id_e ? 'id="'.$id_e.'"' : '' ?>>
+<div id="erhvervsgalleri" class="inspirations <?php echo $bg ? $bg : '' ?>" <?php echo $id_e ? 'id="'.$id_e.'"' : '' ?>>
   <?php echo $title ? '<h3>'.$title.'</h3>' : '' ?>
   <?php echo $content ? '<p>'.$content.'</p>' : '' ?>
 
@@ -42,7 +42,7 @@
 
       <a href="<?php echo $imageSrcFull; ?>" data-lightbox="gallery-<?php echo $galleryUniq; ?>" class="slide">
         <div class="slide-cont">
-          <img src="<?php echo $imageSrcThumb; ?>" alt="">
+          <img data-src="<?php echo $imageSrcThumb; ?>" alt="">
           <div class="cover"><b><?php echo $productTitle; ?></b><br/><?php echo $productSubtitle; ?></div>
         </div>
       </a>

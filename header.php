@@ -29,11 +29,23 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <!-- /optional -->
     <?php
-	// do not remove
-	wp_head();
+    // do not remove
+    wp_head();
+    $front_page_class = '';
+    if (is_front_page()) {
+      $front_page_class = ' is-front-page';
+    }
 	?>
+  <script type="text/javascript">var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6168027-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</script>
   </head>
-  <body <?php body_class( 'no-js' ); ?>>
+  <body <?php body_class( 'no-js'. $front_page_class ); ?> <?php if (is_front_page()) : ?> data-spy="scroll" data-target="#navigation"  data-offset="70"<?php endif; ?>>
 
   <nav class="accessibility-nav">
     <ol>
@@ -45,7 +57,7 @@
 
   <div id="mask"></div>
   <div id="modal-mask"></div>
-  <div class="modal">
+  <div class="modal modal-bordered">
     <div class="relative">
       <div class="modal-close"></div>
     </div>
@@ -88,10 +100,8 @@
         <?php
           wp_nav_menu( array(
             'container'      => false,
-            'menu' => 'Top Navigation Menu',
-            'menu_id'        => '',
-            'menu_class'     => '',
-            'items_wrap'     => '<ul>%3$s</ul>'
+            'menu'           => 'Top Navigation Menu',
+            'items_wrap'     => '<ul class="nav">%3$s</ul>'
           ) );
         ?>
         <div class="btn-menu"></div>

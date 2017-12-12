@@ -37,7 +37,7 @@
         ?>
         <?php if( $tileImage ): ?>
           <div class="what-tile <?php echo $tileColor ?>">
-            <img src="<?php echo $tileImage ?>" alt="">
+            <img data-src="<?php echo $tileImage ?>" alt="">
           </div>
         <?php else: ?>
           <div class="what-tile <?php echo $tileColor ?>">
@@ -53,7 +53,7 @@
     <?php endif; ?>
 
   <?php if( $leftCircle ): ?>
-    <a href="#gallery-erhvervsgalleri" data-target="#gallery-erhvervsgalleri" class="what-circle-left link-erhvers custom-target-link">
+    <a href="#erhvervsgalleri" data-target="#erhvervsgalleri" class="what-circle-left link-erhvers custom-target-link">
       <div class="text-center center">
         <?php echo $leftCircle ?>
       </div>
@@ -61,7 +61,7 @@
   <?php endif; ?>
   <?php if( $leftCircleImage ): ?>
     <div class="what-circle-left2">
-      <img src="<?php echo $leftCircleImage ?>" alt="">
+      <img data-src="<?php echo $leftCircleImage ?>" alt="">
     </div>
   <?php endif; ?>
     <div class="what-img"></div>
@@ -70,7 +70,7 @@
     </div>
   <?php if( $rightCircleImage ): ?>
     <div class="what-circle">
-      <img src="<?php echo $rightCircleImage ?>" alt="">
+      <img data-src="<?php echo $rightCircleImage ?>" alt="">
     </div>
   <?php endif; ?>
   <?php if( $rightCircle ): ?>

@@ -110,7 +110,7 @@ endif;
               $image = get_sub_field('logos_image');
               ?>
 
-              <div class="slide-logo"><img src="<?php echo $image ?>" alt=""></div>
+              <div class="slide-logo"><img data-src="<?php echo $image ?>" alt=""></div>
 
             <?php endwhile; ?>
 
